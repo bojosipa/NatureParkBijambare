@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>O nama </title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/heroes/">
+
+    
+
+    
+
+<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        main{
+            background-color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,109,70,1) 25%, rgba(48,182,49,0.7514356084230567) 42%, rgba(20,165,48,1) 66%);
+        }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      nav {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left:0;
+        padding: 20px 8%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: 'Roboto';
+
+    }
+
+      nav .logo{
+          margin-top: 10px;
+          height: 110px;
+          width: 150px;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          border-radius: 5px;
+          
+      }
+
+        
+      nav ul li{
+          list-style: none;
+          display: inline-block;
+          margin-left: 40px;
+      }
+
+      nav ul li a{
+          text-decoration: none;
+          color: white;
+          font-size: 20px;
+          text-align: center;
+          display: flex;
+          border-right:1px solid white;
+          border-left: 1px solid white;
+          padding-right: 5px ;
+          padding-left: 5px;
+        
+
+      }
+
+      nav ul li a:hover{
+        -webkit-text-stroke: 2px white;
+        color: transparent;
+        perspective: 1000px;
+        transform: perspective(10000px) rotateX(0deg);
+        border: 2px solid white;
+        text-decoration: none;
+      }
+
+      #ikona{
+        color: #fff;
+        font-size: 35px;
+        display: none;
+    
+  }
+
+       #gumb{
+        background: transparent;
+        border: none;
+        display: none;
+  }
+
+      #close{
+          color: #04692f;
+          font-size: 26px;
+          display: none;
+      
+  }
+
+     #iks{
+        background: transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px;
+        padding: 10px;
+        border: none;
+        display: none;
+      
+  }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      #naslovna {
+        background-image: 
+        linear-gradient(rgba(3, 51, 21, 0.3),rgba(3, 51, 21, 0.3)),
+        url(bijambare.jpg);
+        background-size: cover;
+        padding-top: 190px;
+        padding-bottom: 100px;
+      }
+
+      #paragraf{
+        padding-top: 20px;
+      }
+
+      .btn{
+
+        font-family: Roboto, sans-serif;
+        font-weight: 0;
+        font-size: 20px;
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0);;
+        padding: 10px 30px;
+        border: solid #fff 3px;
+        box-shadow: rgb(0, 0, 0) 4px 7px 38px -3px;
+        border-radius: 50px;
+        transition : 1000ms;
+        transform: translateY(0);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+
+
+      }
+
+      .btn a{
+            color: #fff;
+            text-decoration: none;
+       }
+
+      .btn:hover{
+
+        transition : 1000ms;
+        padding: 10px 50px;
+        transform : translateY(-0px);
+        background-color: rgba(255, 255, 255, 0);
+        color: #fff;
+        border: solid 5px #fff;
+      }
+
+      #vlak{
+        background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,109,70,1) 25%, rgba(48,182,49,0.7514356084230567) 42%, rgba(20,165,48,1) 66%);
+        padding-bottom: 30px;
+        padding-top: 20px;
+      }
+
+      #nekropola{
+        background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,109,70,1) 25%, rgba(48,182,49,0.7514356084230567) 42%, rgba(20,165,48,1) 66%);
+        padding-bottom: 30px;
+        padding-top: 20px;
+      }
+
+      p {
+        padding-top: 20px; ;
+      }
+
+      #divider{
+        background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,109,70,1) 25%, rgba(48,182,49,0.7514356084230567) 42%, rgba(20,165,48,1) 66%);
+      }
+      
+      #jezero{
+        background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,109,70,1) 25%, rgba(48,182,49,0.7514356084230567) 42%, rgba(20,165,48,1) 66%);
+        padding-bottom: 30px;
+        padding-top: 20px;
+      }
+
+      #top {
+        position: relative;
+        font-size: 30px;
+        float: right;
+        padding-right: 20%;
+        padding-top: -10%;
+        margin-bottom: -70%;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      #return_top {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background: rgba(123, 120, 120, 0.6);
+          width: 50px;
+          height: 50px;
+          display: block;
+          text-decoration: none;
+          -webkit-border-radius: 35px;
+          -moz-border-radius: 35px;
+          border-radius: 35px;
+          -webkit-transition: all 0.3s linear;
+          -moz-transition: all 0.3s ease;
+          -ms-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+        }
+
+     #return_top:hover {
+        background:rgb(123, 120, 120);
+      }
+
+      #top:hover{
+          color: rgb(255, 255, 255);
+          top: -5px;
+        }
+
+
+      @media only screen and (max-width: 940px) {
+        nav ul {
+          display: none;
+        }
+      
+        #gumb {
+            display: block;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        nav .logo{
+            height: 90px;
+            width: 120px;
+            
+        }
+        
+        #ikona{
+            display: block;
+        }
+        
+        nav ul.open {
+            display: block;
+            padding: 10px;
+          
+        }
+
+        
+        nav ul.open li {
+            display: block;
+            background: rgb(255,255,255);
+            background: linear-gradient(90deg, rgba(255,255,255,1) 27%, rgba(189,203,188,1) 62%);
+            width: 100vw;
+          
+        }
+
+        nav ul.open li a {
+            color: #7d7e7d;
+            font-size: 20px;
+        }
+
+        .hide-logo {
+            display: none;
+        }
+
+        
+        #close{
+            display: block;
+            font-size: 30px;
+            color: rgb(80, 78, 78);
+          
+            
+        }
+        
+        #iks{
+            display: inline-block;
+            padding-right: 2rem;
+            padding-top: 1.5rem;
+        
+        }
+        
+        nav ul.open + #gumb #ikona {
+            display: none;
+        } 
+    
+      } 
+        
+
+  
+
+
+
+    </style>
+
+
+    <link href="heroes.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <nav>
+      <a href="../Početna/index.html" class="pocetna" id="logo"><img src="logo3.png" class="logo" ></a>
+      <ul>
+          <li><a href="../Početna/index.html">POČETNA</a><button id="iks" class="close-btn"> <i class="fa fa-times" aria-hidden="true" id="close"></i></button> </li>
+          <li><a href="../O nama/O nama.html">O NAMA</a></li>
+          <li><a href="../Pećine/pecine.html">PEĆINE</a></li>
+          <li><a href="../Cjenovnik/cjenovnik.html">CJENOVNIK</a></li>
+          <li><a href="../Kontakt/kontakt.html">KONTAKT</a></li>
+      </ul>
+
+
+
+     <button id="gumb" class="menuBtn"> <i class="fa fa-bars" aria-hidden="true" id="ikona"></i></button>
+     
+  </nav>
+<main>
+  
+
+  <div class="px-4 text-center" id="naslovna">
+    <h1 class="display-5 fw-bold text-white">Dobro nam došli!</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4 text-white" id="paragraf">Pećinski ukrasi i večernji šišmiši, tišina na koju niste navikli, cvijeće, livade i šume, potok koji žubori i smiruje, sve je to dio priče o Bijambarama.
+        Smještene na nadmorskoj visini od 952 metra, Bijambare se prostiru na gotovo 500 hektara. Cijelo područje obraslo je gustom zimzelenom šumom, s prekrasnim livadama koje presijecaju dva potoka, tvoreći tako nekoliko malih privremenih jezera.  </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn"><a href="#vlak">Saznajte više</a></button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="b-example-divider" id="divider"></div>
+
+  <div class="text-center border-bottom text-white" id="vlak">
+    <h1 class="display-4 fw-bold">Eko vlakić</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Naš predivni park možete obići sa eko vlakom koji broji kapacitet od 150 mjesta. Vlak vozi od ulaza u park do restorana "Dino" gdje postoji mali park za djecu, 
+        a i odlično je i lijepo uređeno mjesto za osvježenje i jelo. Također, od restorana kreću ture za obilazak pećina koje se nalaze u blizini restorana.</p>
+     
+    </div>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+      <div class="container px-5">
+        <img src="vlak.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <div class="b-example-divider" id="divider"></div>
+
+  <div class="text-center border-bottom text-white" id="nekropola">
+    <h1 class="display-4 fw-bold">Nekropola stećaka Mramorje</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">U sklopu Zaštićenog pejzaža „Bijambare“ 2013. godine iz Donjih Čevljanovića izmješteno je 39 stećaka. Nekropola nosi naziv „Mramorje“, a stećci su u formi sljemenjaka i sanduka. Spomenici su dobro klesani, ali su zbog zuba vremena obrasli lišajevima. Na nekim su ukrasi u potpunosti uništeni, a na onima koji su sačuvani mogu se vidjeti spirale, križevi, ljiljan, rozete, tri para rebara, kose linije, motiv grozda, motiv zastave.</p>
+     
+    </div>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+      <div class="container px-5">
+        <img src="stećci.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="b-example-divider" id="divider"></div>
+
+  <div class="text-center border-bottom text-white" id="jezero">
+    <h1 class="display-4 fw-bold">Jezero Bjelila</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Jezero Bjelila se nalazi u zaštićenom parku Bijambare. Smješteno na Nišićkoj visoravni predstavlja pravi dragulj prirode,
+        melem za dušu i idealno mjesto za odmor. Jezero presušuje tijekom ljetnih mjeseci.</p>
+     
+    </div>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+      <div class="container px-5">
+        <img src="jezero.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+  <div class="b-example-divider" id="divider"></div>
+
+  <div id="return_top" onscroll="scrollFunction()">
+    <a href="" id="top" onclick="topFunction"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+  </div>
+</main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../Početna/hamburger.js"></script>
+    <script>
+        window.onload = function() {
+          document.getElementById("return_top").style.display = "none";
+        }
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+          return_top.style.display = "block";
+        } else {
+          return_top.style.display = "none";
+        }
+        }
+
+
+
+        function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+
+      
+</body>
+</html>

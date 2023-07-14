@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+nav {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left:0;
+	padding: 20px 8%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+nav .logo{
+	  margin-top: 10px;
+	  height: 110px;
+	  width: 150px;
+	  text-align: center;
+	  display: flex;
+	  justify-content: center;
+	  border-radius: 5px;
+	  
+  }
+
+	
+nav ul li{
+	  list-style: none;
+	  display: inline-block;
+	  margin-left: 40px;
+  }
+
+nav ul li a{
+	  text-decoration: none;
+	  color: white;
+	  font-size: 20px;
+	  text-align: center;
+	  display: flex;
+	  border-right:1px solid white;
+	  border-left: 1px solid white;
+	  padding-right: 5px ;
+	  padding-left: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+ nav ul li a:hover{
+	-webkit-text-stroke: 2px white;
+	color: transparent;
+	perspective: 1000px;
+	transform: perspective(10000px) rotateX(0deg);
+	border: 2px solid white;
+  }
+
+  #ikona{
+    color: #fff;
+    font-size: 26px;
+    display: none;
+  
+}
+
+#gumb{
+    background: transparent;
+    border: none;
+    display: none;
+}
+
+#close{
+    color: #04692f;
+    font-size: 26px;
+    display: none;
+    
+}
+
+#iks{
+    background: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    display: none;
+    
+}
+
+.intro {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1rem;
+  }
+  .intro-slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;  
+    object-fit: cover;
+    z-index:-1;
+    
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+ 
+  .intro .intro-header {
+    border-radius: 0.5rem;
+    padding: 2rem 2.5rem;
+    background-color: rgba(0,0,0,0.7);
+  }
+  .intro h1 {
+    font-size: 4rem;
+    margin-bottom: 0.75rem;
+    color: white;
+  }
+  .intro p {
+    font-size: 1.75rem;
+  }
+
+  .myButton {
+	box-shadow: 0px 1px 0px 0px #1c1b18;
+	background-color:transparent;
+	border-radius:15px;
+	border:2px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#505739;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:12px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.myButton:hover {
+	background-color:transparent;
+    font-size: 16px;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+.myButton a{
+    text-decoration: none;
+    color: white;
+}
+  
+@media (max-width: 700px) {
+  html { font-size: 12px; }
+  .intro-header { padding: 1.5rem 2rem; }
+  .intro h1 { font-size: 2.5rem; }
+  .intro p { font-size: 1.25rem; }
+}
+
+.banner{
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("cave.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: 420px 420px;
+}
+.card-img{
+    background: url("cave.jpg") center/cover no-repeat;
+}
+.banner h2{
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.card-content{
+    background: #fff;
+    height: 330px;
+}
+.card-content h3{
+    text-align: center;
+    color: #000;
+    padding: 25px 0 10px 0;
+    font-size: 26px;
+    font-weight: 500;
+}
+.form-row{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+form select, form input{
+    display: block;
+    width: 100%;
+    margin: 15px 12px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 300;
+}
+form input[type = text], form input[type = number], form input::placeholder, select{
+    color: #9a9a9a;
+}
+form input[type = submit]{
+    color: #fff;
+    background: #9a9a9a;
+    padding: 12px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+form input[type = submit]:hover{
+    background: #505739;
+}
+@media(max-width: 992px){
+    .card-container{
+        grid-template-columns: 100%;
+        width: 100vw;
+    }
+    .card-img{
+        height: 330px;
+    }
+}
+
+input[type="date"]::-webkit-datetime-edit {
+    color:  #9a9a9a;
+}
+
+#top {
+  position: relative;
+  font-size: 30px;
+  float: right;
+  padding-right: 20%;
+  padding-top: -10%;
+  margin-bottom: -70%;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#return_top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(123, 120, 120, 0.6);
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#return_top:hover {
+  background:rgb(123, 120, 120);
+}
+
+#top:hover{
+  color: rgb(255, 255, 255);
+  top: -5px;
+}
+
+
+@media only screen and (max-width: 940px) {
+  nav ul {
+    display: none;
+  }
+ 
+  #gumb {
+      display: block;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+  }
+  
+  nav .logo{
+      height: 90px;
+      width: 120px;
+      
+  }
+  
+  #ikona{
+      display: block;
+  }
+  
+  nav ul.open {
+      display: block;
+      padding: 10px;
+    
+  }
+
+  
+  nav ul.open li {
+      display: block;
+      background: rgb(255,255,255);
+       background: linear-gradient(90deg, rgba(255,255,255,1) 27%, rgba(189,203,188,1) 62%);
+      width: 100vw;
+     
+  }
+
+  nav ul.open li a {
+      color: #7d7e7d;
+      font-size: 20px;
+  }
+
+  .hide-logo {
+      display: none;
+  }
+
+  
+  #close{
+      display: block;
+      font-size: 30px;
+      color: rgb(80, 78, 78);
+     
+      
+  }
+  
+  #iks{
+      display: inline-block;
+      padding-right: 2rem;
+      padding-top: 2.2rem;
+  
+  }
+  
+  nav ul.open + #gumb #ikona {
+      display: none;
+  } 
+  
+}

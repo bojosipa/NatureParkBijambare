@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type"content="text/html; charset=utf-8"/>
+		<meta name="viewport"content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Kontakt</title>
+		<link href="css/style.css"rel="stylesheet"type="text/css"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+		<script src="script.js" type="text/javascript"></script>
+		<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+	    </script>
+		<script type="text/javascript">
+			(function(){
+			emailjs.init("qUR0jP-C7GtGrWv2T");
+			})();
+		</script>
+	</head>
+	<body>
+		
+		<nav>
+			<a href="../Početna/index.html" class="pocetna" id="logo"><img src="logo3.png" class="logo"></a>
+			<ul>
+				<li><a href="../Početna/index.html">POČETNA</a><button id="iks" class="close-btn"> <i class="fa fa-times" aria-hidden="true" id="close"></i></button> </li>
+				<li><a href="../O nama/O nama.html">O NAMA</a></li>
+				<li><a href="../Pećine/pecine.html">PEĆINE</a></li>
+				<li><a href="../Cjenovnik/cjenovnik.html">CJENOVNIK</a></li>
+				<li><a href="../Kontakt/kontakt.html">KONTAKT</a></li>
+			</ul>
+
+
+			<button id="gumb" class="menuBtn"> <i class="fa fa-bars" aria-hidden="true" id="ikona"></i></button>
+		
+			
+		</nav>
+		
+		<div class="contact-wrap">
+			<div class="contact-in">
+				<h1>Kontakt podaci</h1>
+				<h2><i class="fa fa-phone" aria-hidden="true"></i> Telefon</h2>
+				<p>033 201-112</p>
+				<h2><i class="fa fa-envelope" aria-hidden="true"></i> Email</h2>
+				<p>bijambare@park.com</p>
+				<h2><i class="fa fa-map-marker" aria-hidden="true"></i> Adresa</h2>
+				<p>Krivajevići, Ilijaš</p>
+				<ul>
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+			<div class="contact-in">
+				<h1>Kontaktirajte nas</h1>
+				<form  class="contact-form" onsubmit="event.preventDefault()">
+					<input type="text" id="fullName" placeholder="Ime i prezime" class="contact-in-input name" required>
+					<input type="text" id="email_id" placeholder="Email" class="contact-in-input email" required>
+					<input type="text" id="subject" placeholder="Predmet" class="contact-in-input predmet" required>
+					<textarea  id="message" placeholder="Poruka" class="contact-in-textarea msg" required></textarea>
+					<button onclick="sendMail()">POŠALJI</button>
+				</form>
+			</div>
+			<div class="contact-in">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2865.575299909004!2d18.50043477598785!3d44.09211997108469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475929e2cf653313%3A0x524807f6019b5310!2sBijambare!5e0!3m2!1shr!2sba!4v1673101042907!5m2!1shr!2sba" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="../Početna/hamburger.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>

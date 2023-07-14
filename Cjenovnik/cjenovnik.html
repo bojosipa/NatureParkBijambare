@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Cjenovnik</title>
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/pricing/">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+    
+    
+
+    
+   
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="arrow_to_top.css">
+
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+
+      nav {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left:0;
+        padding: 20px 8%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: 'Roboto';
+
+    }
+
+      nav .logo{
+          margin-top: 10px;
+          height: 110px;
+          width: 150px;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          border-radius: 5px;
+          
+      }
+
+        
+      nav ul li{
+          list-style: none;
+          display: inline-block;
+          margin-left: 40px;
+      }
+
+      nav ul li a{
+          text-decoration: none;
+          color: white;
+          font-size: 20px;
+          text-align: center;
+          display: flex;
+          border-right:1px solid white;
+          border-left: 1px solid white;
+          padding-right: 5px ;
+          padding-left: 5px;
+        
+
+      }
+
+      nav ul li a:hover{
+        -webkit-text-stroke: 2px white;
+        color: transparent;
+        perspective: 1000px;
+        transform: perspective(10000px) rotateX(0deg);
+        border: 2px solid white;
+      }
+
+      #ikona{
+    color: #fff;
+    font-size: 26px;
+    display: none;
+  
+}
+
+    #gumb{
+        background: transparent;
+        border: none;
+        display: none;
+  }
+
+    #close{
+        color: #04692f;
+        font-size: 26px;
+        display: none;
+        
+  }
+
+    #iks{
+        background: transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px;
+        padding: 10px;
+        border: none;
+        display: none;
+        
+  }
+
+  #naslov{
+      padding-top: 7rem;
+  }
+
+    
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      h1{
+        padding-top: 15%;
+        
+      }
+
+      #drugi{
+        padding-top: 5%;
+      }
+
+      #tabela{
+        padding-top: 5%;
+        padding-bottom: 5%;
+        background-image: url(list.jpg);
+        background-size: cover;
+        
+        
+      }
+
+      #radno{
+        padding-top: 7%;
+      }
+
+      #djeca{
+        visibility: hidden;
+      }
+
+      #park{
+        background-image: 
+        url(park.jpg);
+        background-size: cover;
+        padding-top: 5%;
+        
+      }
+
+      #pecine{
+        background-image: 
+        url(bijambare.jpg);
+        padding-top: 5%;
+        
+      }
+
+      #main{
+        background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(42,109,70,1) 25%, rgba(48,182,49,0.7514356084230567) 42%, rgba(20,165,48,1) 66%);
+        
+      }
+
+      #top {
+        position: relative;
+        font-size: 30px;
+        float: right;
+        padding-right: 20%;
+        padding-top: -10%;
+        margin-bottom: -70%;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      #return_top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(123, 120, 120, 0.6);
+        width: 50px;
+        height: 50px;
+        display: block;
+        text-decoration: none;
+        -webkit-border-radius: 35px;
+        -moz-border-radius: 35px;
+        border-radius: 35px;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+      }
+
+      #return_top:hover {
+        background:rgb(123, 120, 120);
+      }
+
+      #top:hover{
+        color: rgb(255, 255, 255);
+        top: -5px;
+      }
+
+    @media only screen and (max-width: 940px) {
+        nav ul {
+          display: none;
+        }
+      
+        #gumb {
+            display: block;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        nav .logo{
+            height: 60px;
+            width: 90px;
+            
+        }
+        
+        #ikona{
+            display: block;
+        }
+        
+        nav ul.open {
+            display: block;
+            padding: 10px;
+           
+        }
+
+        
+        nav ul.open li {
+            display: block;
+            background: rgb(255,255,255);
+            background: linear-gradient(90deg, rgba(255,255,255,1) 27%, rgba(189,203,188,1) 62%);
+            width: 100vw;
+          
+        }
+
+        nav ul.open li a {
+            color: #7d7e7d;
+            font-size: 20px;
+        }
+
+        .hide-logo {
+            display: none;
+        }
+
+        
+        #close{
+            display: block;
+            font-size: 30px;
+            color: rgb(80, 78, 78);
+          
+            
+        }
+        
+        #iks{
+            display: inline-block;
+            padding-right: 2rem;
+            padding-top: 1.2rem;
+        
+        }
+        
+        nav ul.open + #gumb #ikona {
+            display: none;
+        } 
+
+        h1{
+          font-size: 26px;
+          
+        }
+
+        #naslov{
+          margin-bottom :-2rem; 
+          padding-top: 5rem;
+        }
+        
+    }
+  
+  
+    </style>
+
+    
+    
+    <link href="pricing.css" rel="stylesheet">
+  </head>
+  <body id="main" onscroll="scrollFunction()">
+    
+    <a  id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+  <div class="container py-3" id="glavno">
+    <header>
+      <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 ">
+
+      
+        <nav>
+          <a href="../Početna/index.html" class="pocetna" id="logo"><img src="logo3.png" class="logo" ></a>
+          <ul>
+              <li><a href="../Početna/index.html">POČETNA</a><button id="iks" class="close-btn"> <i class="fa fa-times" aria-hidden="true" id="close"></i></button> </li>
+              <li><a href="../O nama/O nama.html">O NAMA</a></li>
+              <li><a href="../Pećine/pecine.html">PEĆINE</a></li>
+              <li><a href="../Cjenovnik/cjenovnik.html">CJENOVNIK</a></li>
+              <li><a href="../Kontakt/kontakt.html">KONTAKT</a></li>
+          </ul>
+
+
+
+         <button id="gumb" class="menuBtn"> <i class="fa fa-bars" aria-hidden="true" id="ikona"></i></button>
+         
+      </nav>
+
+    
+   
+      <div class="pricing-header p-3  mx-auto text-center" >
+        <h1 class="display-6 text-white" id="naslov">Cijene ulaska u park</h1>
+      </div>
+  </header>
+
+  <main >
+    <div class="row row-cols-1 row-cols-md-3  text-center" id="park">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Besplatno</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">0<small class="text-muted fw-light">KM</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Djeca do 6 godina</li>
+              <li>Podrazumijeva se i besplatan <br> ulazak u pećinu</li>
+              <li id="djeca">jagsjaklakčl</li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Popusti</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">1<small class="text-muted fw-light">KM</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Učenici</li>
+              <li>Studenti</li>
+              <li>Penzioneri</li>
+              <li>Invalidne osobe</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Puna cijena</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">2<small class="text-muted fw-light">KM</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li id="djeca">Odrasli</li>
+              <li>Odrasli</li>
+              <li id="djeca">jagsjaklakčl</li>
+              <li id="djeca">jagsjaklakčl</li>
+            
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+<hr>
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center" >
+        <h1 class="display-6 text-white" id="drugi">Cijene ulaska u pećine</h1>
+    </div>
+
+
+  <main>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" id="pecine">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Popusti</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">2<small class="text-muted fw-light">KM</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Učenici</li>
+              <li>Studenti</li>
+              <li>Penzioneri</li>
+              <li>Invalidne osobe</li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col" >
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Puna cijena</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">3<small class="text-muted fw-light">KM</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li id="djeca">Odrasli</li>
+              <li>Odrasli</li>
+              <li id="djeca">jagsjaklakčl</li>
+              <li id="djeca">jagsjaklakčl</li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Grupe</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">1,50<small class="text-muted fw-light">KM</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Vrijedi za grupe <br> preko 20 osoba</li>
+              <li id="djeca">jagsjaklakčl</li>
+              <li id="djeca">jagsjaklakčl</li>
+            
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<hr>
+
+    <h1 class="display-6 text-center mb-4 text-white" id="radno">Radno vrijeme</h1>
+
+    <div class="table-responsive" id="tabela">
+      <table class="table table-borderless text-center" id="table">
+     
+        <tbody>
+          <tr >
+            <th scope="row" class=" text-white">Ponedjeljak</th>
+            <td  class="text-white ">10:00 - 18:00 h</td>
+          </tr>
+          <tr>
+            <th scope="row" class=" text-white">Utorak</th>
+            <td  class="text-white"> 10:00 - 18:00 h</td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" class=" text-white">Srijeda</th>
+            <td  class="text-white"> 10:00 - 18:00 h</td>
+          </tr>
+          <tr>
+            <th scope="row" class=" text-white">Četvrtak</th>
+            <td  class="text-white"> 10:00 - 18:00 h</td>
+          </tr>
+          <tr>
+            <th scope="row" class=" text-white">Petak</th>
+            <td  class="text-white"> 10:00 - 18:00 h</td>
+          </tr>
+          <tr>
+            <th scope="row" class=" text-white">Vikend</th>
+            <td class="text-white"> 10:00 - 18:00 h</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</div>
+<div id="return_top" onscroll="scrollFunction()">
+  <a href="" id="top" onclick="topFunction"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
+  <script src="../Početna/hamburger.js"></script>
+
+  <script>
+
+    window.onload = function() {
+      document.getElementById("return_top").style.display = "none";
+    }
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        return_top.style.display = "block";
+      } else {
+        return_top.style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+  </script>
+</body>
+</html>

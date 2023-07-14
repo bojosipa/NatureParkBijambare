@@ -1,0 +1,330 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+
+
+}
+
+.naslovna{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(3, 51, 21, 0.3),rgba(3, 51, 21, 0.3));
+    position: relative;
+    padding: 0 5%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav .logo{
+    margin-top: 10px;
+    height: 110px;
+    width: 150px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+  
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    border-right:1px solid white;
+    border-left: 1px solid white;
+    padding-right: 10px ;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+  
+
+}
+
+nav ul li a:hover{
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    perspective: 1000px;
+    transform: perspective(10000px) rotateX(0deg);
+    border: 2px solid white;
+}
+
+#ikona{
+    color: #fff;
+    font-size: 26px;
+    display: none;
+  
+}
+
+#gumb{
+    background: transparent;
+    border: none;
+    display: none;
+}
+
+#close{
+    color: #04692f;
+    font-size: 26px;
+    display: none;
+    
+}
+
+#iks{
+    background: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    display: none;
+    
+}
+
+
+
+.sadrzaj{
+    text-align: center;
+    display: flex;
+    margin-left: -2%;
+      
+}
+
+.sadrzaj h1{
+    font-size: 70px;
+    font-weight: 370;
+    color: white;
+    
+
+}
+
+.btn{
+
+    font-family: Roboto, sans-serif;
+    font-weight: 0;
+    font-size: 20px;
+    color: #04692f;
+    background-color: rgba(255, 255, 255, 0);;
+    padding: 10px 30px;
+    border: solid #fff 3px;
+    box-shadow: rgb(0, 0, 0) 4px 7px 38px -3px;
+    border-radius: 50px;
+    transition : 1000ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+
+
+}
+
+.btn a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn:hover{
+
+transition : 1000ms;
+padding: 10px 50px;
+transform : translateY(-0px);
+background-color: rgba(255, 255, 255, 0);
+color: #04692f;
+border: solid 5px #fff;
+}
+
+.choice{
+    margin-left: 34%;
+    margin-top: 5%;
+    display: flex;
+}
+
+
+.izbor{
+    text-align: center;
+    display: flex;
+}
+
+.izbor a{
+    text-decoration: none;
+    color: white;
+    font-size: 180%;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: white;
+    padding: 10px;
+    height: 70px;
+    width: 300px;
+    margin-top: 320px;
+    margin-left: -650px;
+    display: flex;
+    
+    
+}
+
+.sadrzaj  h1:hover{
+    -webkit-text-stroke: 2px beige;
+    color: transparent;
+
+
+}
+
+.izbor a:hover{
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+}
+
+.back_video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9){
+    .back_video{
+    width: 150%;
+    height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .back_video{
+    width: auto;
+    height: 150%;
+    }
+}
+
+@media (max-width: 700px) {
+    html { font-size: 12px; }
+    .sadrzaj h1 { font-size: 2.5rem; 
+                   padding-left: 10px; 
+    
+    }
+    .choice a{
+        font-size: 60%;
+    }
+    .choice{
+        margin-left: 20%;
+    }
+  }
+
+  .pocetna a{
+    text-decoration: none;
+  }
+
+  .btn:hover{
+
+    transition : 1000ms;
+    padding: 10px 35px;
+    transform : translateY(-0px);
+    background-color: rgba(255, 255, 255, 0);
+    color: #04692f;
+    border: solid 5px #fff;
+  }
+
+
+@media only screen and (max-width: 940px) {
+    nav ul {
+      display: none;
+    }
+   
+    #gumb {
+        display: block;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    nav .logo{
+        height: 90px;
+        width: 120px;
+        
+    }
+    
+    #ikona{
+        display: block;
+    }
+    
+    nav ul.open {
+        display: block;
+        padding: 10px;
+      
+    }
+
+    
+    nav ul.open li {
+        display: block;
+        background: rgb(255,255,255);
+         background: linear-gradient(90deg, rgba(255,255,255,1) 27%, rgba(189,203,188,1) 62%);
+        width: 100vw;
+       
+    }
+
+    nav ul.open li a {
+        color: #7d7e7d;
+        font-size: 20px;
+    }
+
+    .hide-logo {
+        display: none;
+    }
+
+    
+    #close{
+        display: block;
+        font-size: 30px;
+        color: rgb(80, 78, 78);
+       
+        
+    }
+    
+    #iks{
+        display: inline-block;
+        padding-right: 2rem;
+        padding-top: 2.2rem;
+    
+    }
+    
+    nav ul.open + #gumb #ikona {
+        display: none;
+    } 
+    
+}
+
+
+
+
+
+
+ 
+
+
+
+
+

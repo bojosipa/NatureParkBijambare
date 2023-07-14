@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pećine</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="pecine.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+		(function(){
+		emailjs.init("qUR0jP-C7GtGrWv2T");
+		})();
+	</script>
+</head>
+<body>
+    <header>
+       
+    </header>
+    <header class="intro">
+        <div class="intro-slideshow">
+          <img src="ulaz.jpg">
+          <img src="bijambare-1.jpg">
+          <img src="BijambareCavesandSpringsofRiverBosnaTourfromSarajevo.jpg">
+          <img src="14-srednja-bijambarska-pecina.jpg">
+          <img src="Bijambarske-pecine-u-pecini-940x560.jpg">
+        </div>
+        <div class="intro-header">
+            <nav>
+                <a href="../Početna/index.html" class="pocetna" id="logo"><img src="logo3.png" class="logo" ></a>
+                <ul>
+                    <li><a href="../Početna/index.html">POČETNA</a><button id="iks" class="close-btn"> <i class="fa fa-times" aria-hidden="true" id="close"></i></button> </li>
+                    <li><a href="../O nama/O nama.html">O NAMA</a></li>
+                    <li><a href="../Pećine/pecine.html">PEĆINE</a></li>
+                    <li><a href="../Cjenovnik/cjenovnik.html">CJENOVNIK</a></li>
+                    <li><a href="../Kontakt/kontakt.html">KONTAKT</a></li>
+                </ul>
+    
+    
+    
+               <button id="gumb" class="menuBtn"> <i class="fa fa-bars" aria-hidden="true" id="ikona"></i></button>
+               
+            </nav>
+          <h1>Obilazak pećina</h1>
+          <br>
+          <button class="myButton"><a href="pecine.html#rezervacija">Rezervirajte termin</a></button>
+        </div>
+      </header>
+      <section class = "banner" >
+        <h2>REZERVIRAJTE SVOJ TERMIN <br>ZA OBILAZAK PEĆINE</h2>
+        <div class = "card-container" id="rezervacija">
+            <div class = "card-img">
+              
+            </div>
+
+            <div class = "card-content">
+                <h3>Rezervacija</h3>
+                <form onsubmit="event.preventDefault()">
+                    <div class = "form-row">
+                        <input type="date" id="day">
+
+                        <select name = "hours" id="hour">
+                            <option value = "hour-select">Izaberite termin</option>
+                            <option value = "10">11: 00</option>
+                            <option value = "10">12: 00</option>
+                            <option value = "10">13: 00</option>
+                            <option value = "10">14: 00</option>
+                            <option value = "10">15: 00</option>
+                            <option value = "10">16: 00</option>
+                        </select>
+                    </div>
+
+                    <div class = "form-row">
+                        <input type = "text" placeholder="Ime i prezime" id="name">
+                        <input type = "text" placeholder="Email" id="mail">
+                    </div>
+
+                    <div class = "form-row">
+                        <input type = "number" placeholder="Broj osoba" min = "1" id="persons">
+                        <input type = "submit" value = "Rezerviši termin" onclick="sendMail()">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="return_top" onscroll="scrollFunction()">
+            <a href="" id="top" onclick="topFunction"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script src="script.js"></script>
+    <script src="form.js"></script>
+    <script src="../Početna/hamburger.js"></script>
+</body>
+</html>
